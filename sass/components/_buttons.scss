@@ -1,0 +1,47 @@
+.btn {
+    padding: 0 0.8rem;
+    background-color: #f3f3f1;
+    height: $height-normal;
+    border: none;
+    display: inline-block;
+
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    // vertical-align: middle;
+    font-size: 1.15rem;
+    line-height: 1.8em;
+    font-weight: lighter;
+    
+    @include border-radius(2px);
+
+    &:hover {
+        opacity: 0.85;
+        cursor: pointer;
+        @include box-shadow(0,0,4px,gray);
+    }
+}
+
+.btn-small {
+    padding: 0.3rem;
+
+    font-size: 0.8rem;
+    line-height: unset;
+    height: unset;
+}
+
+.btn-big {
+    padding: 0 1rem;
+
+    font-size: 1.30em;
+    line-height: 1.8em;
+}
+
+.btn-icon {
+    padding: 0;
+    width: $height-normal;
+    
+    line-height: normal;
+}
+
+.btn-icon-labeled > i {
+    margin-right: .35em;
+}

@@ -1,0 +1,27 @@
+.label {
+    position: relative;
+}
+
+.label::after {
+    content: '';
+    height: 8px;
+    width: 8px;
+    display: block;
+    position: absolute;
+    top: -2px;
+    right: -1px;
+
+    @include border-radius(50%);
+}
+
+.notification.label::after {
+    @extend .label::after;
+    
+    background-color: #f58220;
+}
+
+.online.label::after {
+    @extend .label::after;
+
+    background-color: #04ae00;
+}

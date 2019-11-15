@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Style Guide</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave|Roboto:300,400|Didact+Gothic|M+PLUS+1p|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/Glyphter.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+<style>
+body {
+    background-color: blanchedalmond;
+    margin: 0;
+    padding: 0;
+}
+
+.styleguide-box {
+    margin: 25px auto;
+    width: 80%;
+    min-width: 500px;
+    background-color: rgb(48, 51, 53);
+    padding: 15px 25px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px #444;
+}
+</style>
+
+</head>
+<body>
+    <div class="styleguide-box">
+        <h1 class="text-white">Komponenty siatki (grid)</h1>
+        <h3 class="text-orange">Informacja: Siatka składa się z 12 bloków.</h3>
+
+        <h3 class="text-white mt-5">Różne wielkości:</h3>
+        <div class="row">
+            <div class="col-4 p-1 bg-secondary border">.col-4</div>
+            <div class="col-6 p-1 bg-secondary border">.col-6</div>
+            <div class="col-2 p-1 bg-secondary border">.col-2</div>
+        </div>
+
+        <h3 class="text-white mt-5">Siatkę można zagnieżdżać:</h3>
+        <div class="row">
+            <div class="col-4 p-2 bg-secondary border">.col-4</div>
+            <div class="col-6 p-1 bg-secondary">
+                <div class="row">
+                    <div class="col-5 p-1 bg-secondary border">.col-5</div>
+                    <div class="col-7 p-1 bg-secondary border">.col-7</div>
+                </div>
+            </div>
+            <div class="col-2 p-2 bg-secondary border">.col-2</div>
+        </div>
+
+        <h3 class="text-white mt-5">Siatka może być responsywna:</h3>
+        <div class="row">
+            <div class="col-4 col-m-12 col-s-12 p-2 bg-secondary border">.col-4 .col-m-12 .col-s-12</div>
+            <div class="col-5 col-m-7 col-s-12 p-2 bg-secondary border">.col-5 .col-m-7 .col-s-12</div>
+            <div class="col-3 col-m-5 col-s-12 p-2 bg-secondary border">.col-3 .col-m-5 .col-s-12</div>
+        </div>
+    </div>
+
+    <div class="styleguide-box">
+        <h1 class="text-white">Komponenty segmentu</h1>
+        
+        <h3 class="text-white mt-5">Element segmentu składa się opcjonalnie z nagłówka oraz ciała (albo z kilku ciał) i prezentuje się w ten sposób:</h3>
+        <div class="segment">
+            <div class="header">
+                Dzień dobry!
+            </div>
+            <div class="body">
+                <p class="text-boxy text-center text-bold">
+                    Witamy na naszej stronie!
+                </p>
+            </div>
+            <div class="body">
+                <p class="text-boxy text-center text-bold">
+                    Wybierz akcję:
+                </p>
+
+                <p class="text-center">
+                    <button class="mx-3 btn btn-big text-primary"></i> Zaloguj</button>
+                    <button class="mx-3 btn btn-big text-primary"></i> Zarejestuj</button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="styleguide-box">
+        <h1 class="text-white">Komponenty nawigacji</h1>
+        
+        <h3 class="text-white mt-5">(!) Komponent wyświetlany jest po lewej stronie.</h3>
+        <h3 class="text-white mt-5">(!) Komponent dodatkowo posiada skrypt JavaScript.</h3>
+        <div id="nav" class="nav">
+            <button class="btn btn-icon text-white bg-none toggle">
+                <i class="icon-details"></i>
+            </button>
+    
+            <div class="title">
+                Title
+            </div>
+    
+            <div class="items">
+                <a href="#0" class="item active"><i class="icon-general"></i><span>General</span></a>
+                <a href="#1" class="item"><i class="icon-details"></i><span>Details</span></a>
+                <a href="#2" class="item"><i class="icon-links"></i><span>Links</span></a>
+            </div>
+    
+            <div class="line"></div>
+    
+            <div class="manager">
+                <p class="title">Logged as</p>
+                <a href="#manager">
+                    <img src="images/p1_graph.png" alt="manager" class="online label">
+                    <span>Mikhael E.</span>
+                </a>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded",function(){
+              var nav = document.querySelector('#nav').classList;
+              document.querySelector('#nav button.toggle').onclick = function(){
+                nav.toggle("active");
+              };
+            });
+        </script>
+    </div>
+
+    <div class="styleguide-box">
+        <h1 class="text-white">Komponenty tekstu</h1>
+        <h3 class="text-orange">Informacja: Warianty można łączyć.</h3>
+
+        <h3 class="text-white mt-5">Różne czcionki:</h3>
+        <p class="text-boxy">.text-boxy</p>
+        <p class="text-bold">.text-bold</p>
+        <p class="text-muted">.text-muted</p>
+        <p class="text-small">.text-small</p>
+
+        <h3 class="text-white mt-5">Różne wyrównanie tekstu:</h3>
+        <p class="text-left">.text-left</p>
+        <p class="text-center">.text-center</p>
+        <p class="text-right">.text-right</p>
+    </div>
+
+    <div class="styleguide-box">
+        <h1 class="text-white">Komponenty kolorów</h1>
+        
+        <h3 class="text-white mt-5">Można dodać kolor tła elementów dodając poniższe klasy:</h3>
+        <p class="bg-unset">.bg-unset</p>
+        <p class="bg-orange">.bg-orange</p>
+        <p class="bg-green">.bg-green</p>
+        <p class="bg-white">.bg-white</p>
+        <p class="bg-blue">.bg-blue</p>
+        <p class="bg-primary">.bg-primary</p>
+        <p class="bg-secondary">.bg-secondary</p>
+        <p class="bg-third">.bg-third</p>
+        
+        <h3 class="text-white mt-5">Można także kolorować składnie tekstu:</h3>
+        <p class="text-black">.text-black</p>
+        <p class="text-orange">.text-orange</p>
+        <p class="text-green">.text-green</p>
+        <p class="text-white">.text-white</p>
+        <p class="text-blue">.text-blue</p>
+        <p class="text-primary">.text-primary</p>
+        <p class="text-secondary">.text-secondary</p>
+        <p class="text-third">.text-third</p>
+    </div>
+
+    <div class="styleguide-box">
+        <h1 class="text-white">Komponenty list</h1>
+        
+        <h3 class="text-white mt-5">Można dodać listę dzieloną jak poniżej:</h3>
+        <div class="list-small full">
+            <div class="list-body">
+                <div class="list-cell text-bold text-left">One cell</div>
+                <div class="list-cell text-arial text-right">Its value</div>
+            </div>
+            <div class="list-body">
+                <div class="list-cell text-bold text-left">Second cell</div>
+                <div class="list-cell text-arial text-right">Its value</div>
+            </div>
+            <div class="list-body">
+                <div class="list-cell text-bold text-left">Next cell</div>
+                <div class="list-cell text-arial text-right">Its other value</div>
+            </div>
+            <div class="list-body">
+                <div class="list-cell text-bold text-left">Another one cell</div>
+                <div class="list-cell text-arial text-right">Its value</div>
+            </div>
+        </div>
+        
+        <h3 class="text-white mt-5">Można także dodać ją z przyciskami widocznymi po najechaniu:</h3>
+        <div class="list my-5 text-left">
+            <div class="list-body">
+                <div class="title">Home page</div>
+                <div>
+                    <a href="#">http://www.homepage.com</a>
+                    <div class="icons">
+                        <button class="btn btn-icon no-border text-orange text-small bg-none">
+                            <i class="icon-links"></i>
+                        </button>
+                        <button class="btn btn-icon no-border bg-none text-small">
+                            <i class="icon-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="list-body">
+                <div class="title">Currently offer</div>
+                <div>
+                    <a href="#">http://www.currently.com</a>
+                    <div class="icons">
+                        <button class="btn btn-icon no-border text-orange text-small bg-none">
+                            <i class="icon-links"></i>
+                        </button>
+                        <button class="btn btn-icon no-border bg-none text-small">
+                            <i class="icon-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="styleguide-box">
+        <h1 class="text-white">Komponenty label</h1>
+        
+        <h3 class="text-white mt-5">Dodanie na elemencie małego znaczka informującego o istnieniu nowych powiadomień działa jak poniżej:</h3>
+        <a href="#not" class="item">
+            <i class="text-primary icon-notification notification label"></i>
+        </a>
+        <a href="#mag" class="item">
+            <i class="text-primary icon-profile online label"></i>
+        </a>
+    </div>
+
+    <div class="styleguide-box">
+        <h1 class="text-white">Komponenty guzika</h1>
+        <h3 class="text-orange mt-5">Sugestia: Najlepiej łączyć z komponentami kolorów.</h3>
+
+        <h3 class="text-white mt-5">Warianty rozmiaru:</h3>
+        <button class="btn bg-orange text-white">+ add new</button>
+        <button class="btn btn-small bg-orange text-white">+ add new</button>
+
+        <h3 class="text-white mt-5">Wariant z ikoną:</h3>
+        <button class="btn btn-icon bg-blue"><i class="text-white icon-refresh"></i></button>
+        <button class="btn btn-big btn-icon-labeled bg-none text-white"><i class="arc bg-secondary circle-normal"></i> Current not available</buton>
+    </div>
+</body>
+</html>

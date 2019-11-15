@@ -1,0 +1,63 @@
+.list {
+    &> .list-body {
+        padding: 0 20px;
+
+        line-height: 50px;
+
+        border-bottom: 1px solid $primary-color-bg;
+
+        &:hover {
+            background-color: $site-bg-color;
+        }
+
+        &> div.title {
+            font-weight: bold;
+        }
+
+        &> div {
+            position: relative;
+            display: inline-block;
+            width: 49%;
+
+            vertical-align: middle;
+
+            &> .icons {
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 100%;
+    
+                display: none;
+            }
+        }
+
+        &:hover > div > .icons {
+            display: block !important;
+        }
+    }
+}
+
+.list-small {
+    &> .list-body {
+        display: inline-block;
+
+        margin: 0 auto;
+        padding: 10px 10px;
+        width: 98%;
+
+        border-bottom: 1px solid $primary-color-bg;
+
+        &:hover {
+            background-color: $site-bg-color;
+        }
+
+        &> .list-cell {
+            width: 49%;
+            display: inline-block;
+        }
+    }
+
+    &> .list-body.full {
+        width: 100%;
+    }
+}

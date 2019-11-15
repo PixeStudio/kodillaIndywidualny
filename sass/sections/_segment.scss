@@ -1,0 +1,41 @@
+.segment {
+    display: block;
+    position: relative;
+
+    padding: 0;
+    margin: 15px;
+
+    background-color: $site-main-color;
+
+    @include box-shadow(0,0,4px,gray);
+    @include border-radius(2px);
+
+    &> .header {
+        padding: 15px;
+
+        font-family: 'Didact Gothic', Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $primary-color-text;
+    }
+
+    &> .body {
+        padding: 20px 40px;
+        
+        margin: auto;
+
+        img {
+            width: 100%;
+        }
+    }
+    &> .body:before {
+        content: '';
+        position: absolute;
+        left: 0;
+
+        margin-top: -20px;
+        width: 100%;
+        
+        border-top: 1px solid $primary-color-bg;
+    }
+}

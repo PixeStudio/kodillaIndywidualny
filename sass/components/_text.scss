@@ -1,0 +1,43 @@
+.text-justify {
+	text-align: justify !important;
+}
+
+.text-center {
+	text-align: center !important;
+}
+
+.text-left {
+	text-align: left !important;
+}
+
+.text-right {
+	text-align: right !important;
+}
+
+.text-middle {
+	vertical-align: middle;
+}
+
+.text-muted {
+	color: $third-color-text;
+}
+
+.text-arial {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-light {
+	font-weight: 300;
+}
+
+.text-bold {
+	font-weight: bold;
+}
+
+.text-small {
+	font-size: 0.8em;
+}
+
+.text-boxy {
+	font-family: 'Didact Gothic', Arial, Helvetica, sans-serif;
+}
